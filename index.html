@@ -9,12 +9,18 @@
 <body>
   <h1>Sky Check by BB</h1>
   <form id="weatherForm">
-    <label for="cityInput">City:</label>
-    <input id="cityInput" placeholder="e.g. Los Angeles" />
-    <label for="stateInput">State:</label>
-    <input id="stateInput" placeholder="e.g. California" />
-    <label for="zipInput">ZIP Code:</label>
-    <input id="zipInput" placeholder="e.g. 90001" />
+    <div class="form-row">
+      <label for="cityInput">City:</label>
+      <input id="cityInput" placeholder="e.g. Los Angeles" />
+    </div>
+    <div class="form-row">
+      <label for="stateInput">State:</label>
+      <input id="stateInput" placeholder="e.g. California" />
+    </div>
+    <div class="form-row">
+      <label for="zipInput">ZIP:</label>
+      <input id="zipInput" placeholder="e.g. 90001" />
+    </div>
     <button type="submit">Get Weather</button>
   </form>
   <div id="weatherResult"></div>
