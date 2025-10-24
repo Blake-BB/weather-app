@@ -3,13 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blake's Project Weather Application</title>
+  <title>Sky Check by BB</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Weather App</h1>
-  <label for="city">City:</label>
-  <input id="city" placeholder="e.g. Chicago" />
-  <button id="getWeather">Get Weather</button>
+  <h1>Sky Check by BB</h1>
+  <form id="weatherForm">
+    <label for="cityInput">City:</label>
+    <input id="cityInput" placeholder="e.g. Los Angeles" />
+    <label for="stateInput">State:</label>
+    <input id="stateInput" placeholder="e.g. California" />
+    <label for="zipInput">ZIP Code:</label>
+    <input id="zipInput" placeholder="e.g. 90001" />
+    <button type="submit">Get Weather</button>
+  </form>
   <div id="weatherResult"></div>
   <script src="script.js"></script>
 </body>
