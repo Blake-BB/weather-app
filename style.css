@@ -1,79 +1,103 @@
 body {
-  background-color: #e6f0fa; /* Light blue background for a clean look */
-  font-family: Arial, sans-serif;
+  background-color: #e6f0fa; /* Light blue background */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Modern font stack */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
   margin: 0;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
 }
 
 h1 {
-  color: #1e3a8a; /* Darker blue for header */
-  margin-bottom: 20px;
+  color: #1e3a8a; /* Dark blue */
+  font-size: 2rem; /* Slightly smaller for balance */
+  margin-bottom: 1.5rem;
 }
 
 #weatherForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  background-color: #ffffff; /* White background for form */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  gap: 8px; /* Tighter gap */
+  background-color: #ffffff;
+  padding: 15px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  max-width: 320px; /* Slightly wider */
+  width: 100%;
 }
 
 label {
   color: #1e3a8a;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.9rem; /* Smaller, cleaner */
 }
 
 input {
   padding: 8px;
-  border: 1px solid #bfdbfe; /* Light blue border */
-  border-radius: 4px;
-  width: 200px;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px; /* Softer corners */
+  width: 100%; /* Full width for consistency */
+  max-width: 280px; /* Constrain width */
   outline: none;
+  transition: border-color 0.2s ease; /* Smooth focus transition */
 }
 
 input:focus {
-  border-color: #1e3a8a; /* Darker blue on focus */
+  border-color: #1e3a8a;
+  box-shadow: 0 0 4px rgba(30, 58, 138, 0.2); /* Subtle glow */
 }
 
 button {
   background-color: #1e3a8a;
   color: white;
-  padding: 10px 20px;
+  padding: 10px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 1rem;
+  width: 100%; /* Full width */
+  max-width: 280px; /* Match input width */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth hover */
 }
 
 button:hover {
-  background-color: #3b82f6; /* Lighter blue on hover */
+  background-color: #3b82f6;
+  transform: translateY(-1px); /* Slight lift */
 }
 
 .weather-card {
   background-color: #ffffff;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Reduced padding */
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   text-align: center;
-  max-width: 300px;
+  max-width: 320px;
+  width: 100%;
+  animation: fadeIn 0.3s ease; /* Subtle fade-in */
 }
 
 .weather-card h2 {
   color: #1e3a8a;
-  margin: 0 0 10px;
+  font-size: 1.5rem;
+  margin: 0 0 8px;
 }
 
 .weather-card p {
-  margin: 5px 0;
+  margin: 4px 0;
   color: #374151;
+  font-size: 0.9rem;
 }
 
 .weather-card img {
-  width: 50px;
+  width: 48px; /* Slightly smaller */
+  margin-top: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
