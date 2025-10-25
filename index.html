@@ -2,28 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sky Check by BB</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z' fill='%231e3a8a'/></svg>" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <h1>Sky Check by BB</h1>
-  <form id="weatherForm">
-    <div class="form-row">
-      <label for="cityInput">City:</label>
-      <input id="cityInput" placeholder="e.g. Los Angeles" />
-    </div>
-    <div class="form-row">
-      <label for="stateInput">State:</label>
-      <input id="stateInput" placeholder="e.g. California" />
-    </div>
-    <div class="form-row">
-      <label for="zipInput">ZIP:</label>
-      <input id="zipInput" placeholder="e.g. 90001" />
-    </div>
-    <button type="submit">Get Weather</button>
-  </form>
-  <div id="weatherResult"></div>
+  <header>
+    <h1>Sky Check by BB</h1>
+  </header>
+  <main>
+    <form id="weatherForm" aria-label="Weather search form">
+      <div class="form-row">
+        <label for="cityInput">City:</label>
+        <input id="cityInput" placeholder="e.g. London, Tokyo, São Paulo" autocomplete="off" aria-label="Enter city name" />
+      </div>
+      <div class="form-row">
+        <label for="stateInput">State (optional):</label>
+        <input id="stateInput" placeholder="e.g. Georgia" autocomplete="off" aria-label="Enter state name (optional)" />
+      </div>
+      <div class="form-row">
+        <label for="zipInput">ZIP (US only):</label>
+        <input id="zipInput" placeholder="e.g. 30301" autocomplete="off" aria-label="Enter US ZIP code (optional)" />
+      </div>
+      <div class="button-group">
+        <button type="submit" aria-label="Get weather data">Get Weather</button>
+        <button type="button" id="clearForm" aria-label="Clear form inputs">Clear Form</button>
+      </div>
+    </form>
+    <div id="weatherResult" role="region" aria-live="polite"></div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
